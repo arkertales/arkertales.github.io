@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="favicon.ico" />	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link href="style.css" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="code.js"></script>
+
+	<title>查理應援團</title>
+
+	<body>
+	    
+    	<div id="fb-root"></div>
+	     <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.5&appId=173269019689901";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+	    
+		<div class="container">		
+			
+			<div id="countDown" class="row" style="">				
+					
+				<div class="jumbotron">
+					<h2>查理應援團</h2>
+				</div>			
+				
+				<div id="spinner">
+					<div class="spinner"></div>
+				</div>	
+				
+				<div id="daysToBegin" class="col-md-12 col-xs-12 text-center" style="display: none;">
+					<h3><span class="text-dange">距離查理入伍還有</span></h3>
+					<span class="day num text-danger"></span><span class="units">天</span>
+					<span class="hour num text-danger"></span><span class="units">時</span>
+					<span class="min num text-danger"></span><span class="units">分</span>
+					<span class="sec num text-danger"></span><span class="units">秒</span>					
+				</div>
+				
+				<div id="daysLeft" class="col-md-12 col-xs-12 text-center" style="display: none;">
+					
+					<h3><span class="text-danger">距離查理退伍還有</span></h3>
+					<span class="day num text-success"></span><span class="units">天</span>
+					<span class="hour num text-success"></span><span class="units">時</span>
+					<span class="min num text-success"></span><span class="units">分</span>
+					<span class="sec num text-success"></span><span class="units">秒</span>	
+					
+					<div class="progress active">
+					
+						<div id="progressBar" class="progress-bar progress-bar-success progress-bar-striped my-reverse-class" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;min-width: 2em;">
+							0%
+						</div>
+					</div>
+				</div>
+				
+				<div id="startEndDetail" class="text-center text-muted">
+				<h5 id="startDetail">起始時間:2015/11/18 00:00:00</h5>
+				<h5 id="endDetail">結束時間:2015/10/18 00:00:00</h5>
+				</div>
+			</div>	
+			
+			<hr/>
+			
+			<div id="messageBoard" class="row" style="">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+
+			    
+    			<div class="fb-comments col-md-6 col-xs-12" data-href="http://arkertales.lionfree.net/" data-numposts="5" data-mobile="true"></div>
+    			<div id="disqus_thread" class="col-md-6 col-xs-12"></div>
+			</div>
+		</div>
+		
+		<script>
+			 
+			 var disqus_config = function () {
+				this.page.url = 'http://arkertales.lionfree.net';  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = 'charlieMessageBoard'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+			};
+			
+			
+			(function() {  // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				
+				s.src = 'http://arkertales.disqus.com/embed.js';
+				
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+			})();
+		</script>
+	</body>
+</html>
