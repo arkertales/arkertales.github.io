@@ -1,5 +1,5 @@
 var strStartDate = '2015/11/18 00:00';
-var strEndDate = '2016/10/18 00:00';
+var strEndDate = '2016/10/19 00:00';
 
 var startDate = new Date(strStartDate);
 var endDate = new Date(strEndDate);			
